@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-fuikh_(&a6zgw4*lulj4chb7mb182x9bf3yck9bz$mw3o&he67
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -116,3 +116,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

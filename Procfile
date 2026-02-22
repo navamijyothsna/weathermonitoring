@@ -1,0 +1,1 @@
+web: gunicorn isro_weather.wsgi
