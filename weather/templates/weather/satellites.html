@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ISRO Satellites</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+        }
+        .card {
+            border: 1px solid white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🛰 ISRO Satellite Information</h1>
+
+{% for satellite in satellites %}
+<div class="card">
+    <h2>{{ satellite.name }}</h2>
+    <p><strong>Launch Year:</strong> {{ satellite.launch }}</p>
+    <p><strong>Purpose:</strong> {{ satellite.purpose }}</p>
+    <p><strong>Orbit:</strong> {{ satellite.orbit }}</p>
+</div>
+{% endfor %}
+
+</body>
+</html>
