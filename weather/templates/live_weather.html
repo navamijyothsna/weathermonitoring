@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Weather</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #000428, #004e92);
+            color: white;
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🌍 Live Weather Data</h1>
+
+<div class="card">
+    <h2>Temperature: {{ weather.temperature }}°C</h2>
+    <h3>Wind Speed: {{ weather.windspeed }} km/h</h3>
+    <h3>Weather Code: {{ weather.weathercode }}</h3>
+</div>
+
+</body>
+</html>

@@ -58,3 +58,19 @@ def satellites(request):
     ]
 
     return render(request, "satellites.html", {"satellites": satellite_data})
+
+  
+
+def live_weather(request):
+    url = "https://api.open-meteo.com/v1/forecast?latitude=8.5241&longitude=76.9366&current_weather=true"
+
+    response = requests.get(url)
+    data = response.json()
+
+    weather_data = {
+        "temperature": data["current_weather"]["temperature"],
+        "windspeed": data["current_weather"]["windspeed"],
+        "weathercode": data["current_weather"]["weathercode"],
+    }
+
+    return render(request, "live_weather.html", {"weather": weather_data})
